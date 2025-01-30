@@ -1,0 +1,1350 @@
+html, body {
+    height: 100%; /* Définit la hauteur de html et body à 100% de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut du body */
+    display: flex; /* Utilise flexbox pour disposer les éléments enfants */
+    flex-direction: column; /* Aligne les enfants de haut en bas */
+    margin-top: 70px; /* Augmente la marge pour le header plus grand */
+}
+
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive; /* Définit la police du texte */
+    overflow: scroll; /* Permet le défilement de la page si nécessaire */
+    overflow-x: hidden; /* Cache le défilement horizontal */
+}
+
+main {
+    font-family: Comic Sans MS, Comic Sans, cursive; /* Définit la police du texte pour main */
+    color: #ffffff; /* Définit la couleur du texte à blanc */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    flex: 1; /* Permet à main de s'étendre pour remplir l'espace disponible */
+    margin-top: 60px; /* Ajuste la marge du haut */
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; /* Réduit la marge de 120px à 20px */
+    flex-wrap: wrap;
+}
+
+.column {
+    width: 25%; /* Définit la largeur de chaque colonne à 25% */
+    background-color: #1e1e1e; /* Définit la couleur de fond des colonnes */
+    padding: 10px; /* Ajoute un padding à l'intérieur des colonnes */
+    border-radius: 5px; /* Arrondit les coins des colonnes */
+    display: flex; /* Utilise flexbox à l'intérieur des colonnes */
+    flex-direction: column; /* Aligne les enfants de la colonne de haut en bas */
+    align-items: center; /* Centre les éléments enfants horizontalement */
+    margin-bottom: 10px; /* Réduit de 20px à 10px */
+}
+
+.column img {
+    width: 80%; /* Définit la largeur des images à 80% de la colonne */
+    height: auto; /* Maintient le ratio d'aspect des images */
+    border-radius: 40px; /* Arrondit les coins des images */
+    margin-bottom: 10px; /* Ajoute un espace en bas des images */
+}
+
+.text-line {
+    overflow: hidden; /* Cache tout débordement de contenu */
+    white-space: normal; /* Permet à la ligne de texte de s'enrouler */
+    word-wrap: break-word; /* Permet de couper les mots longs pour les faire entrer dans l'espace */
+    color: #ffffff; /* Définit la couleur du texte à blanc */
+}
+
+table {
+    width: 75%; /* Définit la largeur des tableaux à 75% de la fenêtre */
+    border-collapse: separate; /* Permet d'avoir des bordures séparées dans le tableau */
+    margin-left: 200px; /* Ajoute une marge à gauche du tableau */
+}
+
+th, td {
+    border: 3px solid white; /* Définit une bordure blanche de 3px autour des cellules */
+    padding: 10px; /* Ajoute un padding à l'intérieur des cellules */
+    text-align: left; /* Aligne le texte à gauche dans les cellules */
+    background-color: #000000; /* Définit la couleur de fond des cellules à noir */
+}
+
+th {
+    background-color: #000000; /* Définit la couleur de fond des en-têtes de tableau à noir */
+}
+
+.video-background {
+    position: fixed; /* Fixe la vidéo en arrière-plan */
+    top: 0; /* Positionne le haut de la vidéo au sommet de la fenêtre */
+    left: 0; /* Positionne le côté gauche de la vidéo à gauche de la fenêtre */
+    width: 100%; /* Définit la largeur de la vidéo à 100% de la fenêtre */
+    height: 100%; /* Définit la hauteur de la vidéo à 100% de la fenêtre */
+    z-index: -1; /* Place la vidéo derrière tous les autres éléments */
+    overflow: hidden; /* Cache tout débordement de contenu de la vidéo */
+}
+
+video {
+    width: 100%; /* Définit la largeur de la vidéo à 100% de l'élément parent */
+    height: 100%; /* Définit la hauteur de la vidéo à 100% de l'élément parent */
+    object-fit: cover; /* Ajuste la vidéo pour couvrir complètement l'élément sans déformer le ratio d'aspect */
+}
+
+.video-container {
+    max-width: 700px; /* Définit la largeur maximale du conteneur de vidéo */
+    width: 100%; /* Définit la largeur à 100% de l'élément parent */
+    background-color: #000; /* Définit la couleur de fond à noir */
+    overflow: hidden; /* Cache tout débordement de contenu */
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    color: #fff;
+    padding: 8px; /* Augmente le padding de 5px à 8px */
+    text-align: center;
+    border-bottom: 2px solid #f39c12;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    height: auto; /* Permet au header de s'adapter à son contenu */
+}
+
+/* Ajuster le titre dans le header */
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Augmente la taille du titre de 1.8em à 2em */
+    padding: 5px 0; /* Augmente le padding de 3px à 5px */
+    position: relative;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff1a1a;
+    text-shadow: 
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 0 10px rgba(255, 26, 26, 0.7),
+        0 0 20px rgba(255, 26, 26, 0.4);
+    font-weight: bold;
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff1a1a,
+        transparent
+    );
+}
+
+/* Animation pour le titre */
+@keyframes titlePulse {
+    0%, 100% {
+        text-shadow: 
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 0 10px rgba(255, 26, 26, 0.7),
+            0 0 20px rgba(255, 26, 26, 0.4);
+    }
+    50% {
+        text-shadow: 
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 0 15px rgba(255, 26, 26, 0.9),
+            0 0 30px rgba(255, 26, 26, 0.6);
+    }
+}
+
+header h1 {
+    animation: titlePulse 3s infinite;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 1em; /* Réduit encore la taille du sous-titre */
+    padding: 2px 0;
+}
+
+.container {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px; /* Réduit encore le padding de 15px à 10px */
+    z-index: 1;
+}
+
+.container h2 {
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d3d3d3;  /* Gris clair */
+    text-shadow: 
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        0 0 5px rgba(255, 0, 0, 0.8),
+        0 0 15px rgba(255, 0, 0, 0.4);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-left: 4px solid #8b0000;  /* Rouge foncé */
+    border-right: 4px solid #8b0000;
+    position: relative;
+    margin: 2px 0; /* Réduit encore la marge verticale de 5px à 2px */
+    width: auto;
+    display: inline-block;
+}
+
+.container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff0000,
+        transparent
+    );
+}
+
+.container + .container {
+    margin-top: 30px; /* Espacement entre les conteneurs */
+}
+
+/* Exception pour le premier titre */
+main > .container:first-child {
+    margin-bottom: 40px; /* Plus grand espacement après le premier titre */
+}
+
+/* Ajuster l'espacement entre les titres et les colonnes qui suivent */
+.container + .container + .container {
+    margin-top: 10px; /* Réduit l'espacement pour les titres suivants */
+}
+
+.card {
+    border: 2px solid #fff; /* Définit une bordure blanche de 2px autour de la carte */
+    border-radius: 50px; /* Arrondit les coins de la carte */
+    width: 200px; /* Définit la largeur de la carte à 200px */
+    height: 75px; /* Définit la hauteur de la carte à 75px */
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
+    background-color: #757474; /* Définit la couleur de fond de la carte */
+    color: white; /* Définit la couleur du texte à blanc */
+    font-size: 15px; /* Définit la taille de la police du texte */
+    position: relative; /* Permet un positionnement relatif pour les éléments enfants */
+    z-index: 1; /* Place la carte au-dessus des éléments de fond */
+}
+
+.music-player {
+    text-align: center; /* Centre le texte à l'intérieur du lecteur de musique */
+    margin: 20px; /* Ajoute une marge autour du lecteur de musique */
+}
+
+footer {
+    text-align: center; /* Centre le texte à l'intérieur du pied de page */
+    padding: 20px; /* Ajoute un padding à l'intérieur du pied de page */
+    background: rgba(51, 51, 51, 0.9); /* Définit une couleur de fond semi-transparente pour le pied de page */
+    color: #fff; /* Définit la couleur du texte à blanc */
+    width: 100%; /* Définit la largeur du pied de page à 100% de la fenêtre */
+    z-index: 1; /* Place le pied de page au-dessus des éléments de fond */
+}
+
+/* Style pour l'image cliquable */
+.image-cliquable {
+    width: 1000px; /* Largeur de l'image */
+    height: 1000px; /* Hauteur de l'image */
+    border-radius: 10px; /* Arrondi des coins de l'image */
+    margin: 20px auto; /* Centrage et espacement autour de l'image */
+    display: block; /* Force l'image à être sur une nouvelle ligne */
+}
+
+.image-container {
+    display: flex;                /* Utilise flexbox */
+    justify-content: center;      /* Centre l'image horizontalement */
+    align-items: center;          /* Centre l'image verticalement */
+    height: 100vh;                /* Utilise toute la hauteur de la fenêtre */
+    width: 100%;                  /* Utilise toute la largeur de la fenêtre */
+    position: relative;           /* Pour s'assurer que l'image et le map sont positionnés correctement */
+}
+
+/* Style pour l'image */
+.image-container img {
+    max-width: 100%;              /* L'image ne dépasse pas la largeur de la fenêtre */
+    max-height: 100%;             /* L'image ne dépasse pas la hauteur de la fenêtre */
+    object-fit: contain;         /* L'image garde son ratio d'aspect sans déformation */
+}
+
+/* .carrousel-container : Conteneur du carrousel (zone visible qui contient toutes les images du carrousel) */
+.carrousel-container {
+    position: relative; /* Positionne le conteneur de manière relative */
+    width: 80%; /* Définit la largeur du carrousel à 80% de la largeur de son élément parent */
+    max-width: 1000px; /* Limite la largeur maximale du carrousel à 1000px */
+    margin: 50px auto; /* Ajoute une marge de 50px en haut et en bas */
+    overflow: hidden; /* Cache toute partie du carrousel qui dépasse */
+}
+
+/* .carrousel : Le conteneur principal du carrousel */
+.carrousel {
+    display: flex; /* Affiche les éléments du carrousel en ligne */
+    transition: transform 0.5s ease-in-out; /* Ajoute une transition douce */
+}
+
+/* .carrousel-item : Chaque image dans le carrousel */
+.carrousel-item {
+    min-width: 100%; /* Chaque image prend toute la largeur du conteneur */
+    height: auto; /* Laisse la hauteur de l'image s'ajuster automatiquement */
+}
+
+/* Styles des boutons de navigation (précédent et suivant) */
+button {
+    position: absolute; /* Positionne le bouton de manière absolue */
+    top: 50%; /* Place le bouton à la moitié verticale */
+    transform: translateY(-50%); /* Centre le bouton verticalement */
+    background-color: rgba(0, 0, 0, 0.5); /* Définit une couleur de fond semi-transparente */
+    color: white; /* Définit la couleur du texte */
+    border: none; /* Supprime la bordure */
+    font-size: 24px; /* Définit la taille du texte */
+    padding: 10px; /* Ajoute du padding autour du texte */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+/* Bouton de navigation précédent */
+button.prev {
+    left: 10px; /* Positionne le bouton à gauche */
+}
+
+/* Bouton de navigation suivant */
+button.next {
+    right: 10px; /* Positionne le bouton à droite */
+}
+
+/* Effet visuel au survol des boutons */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Change la couleur au survol */
+}
+
+/* Style de base de la barre de navigation */
+.navbar {
+    background-color: #222222;
+    padding: 5px 0;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    border-bottom: 1px solid #8b0000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+/* Style des liens dans la barre de navigation */
+.navbar ul li a {
+    font-family: 'Times New Roman', serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Effet de survol */
+.navbar ul li a:hover {
+    color: #ff0000;
+    transform: translateY(-3px);
+}
+
+/* Animation de soulignement au survol */
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Animation de brillance au survol */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover::after {
+    left: 100%;
+}
+
+/* Animation au clic */
+.navbar ul li a:active {
+    transform: scale(0.95);
+    color: #ff4444;
+}
+
+/* Style pour le lien de la page active */
+.navbar ul li a.active {
+    color: #ff0000;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* Animation de pulsation pour le lien actif */
+@keyframes pulse {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.navbar ul li a.active {
+    animation: pulse 2s infinite;
+}
+
+/* Bouton hamburger sur mobile */
+.menu-toggle {
+    display: none; /* Masquer le bouton par défaut sur grands écrans */
+    background-color: transparent; /* Fond transparent */
+    border: none;
+    color: white;
+    font-size: 30px; /* Taille du bouton */
+    cursor: pointer; /* Pointeur pour cliquer */
+    position: absolute; /* Positionner le bouton en haut à droite */
+    right: 10px;
+    top: 10px;
+}
+
+/* Menu déroulant pour petits écrans */
+#nav-links {
+    display: block; /* Les éléments sont en colonne sur mobile */
+    text-align: left; /* Alignement à gauche */
+}
+
+/* Masquer le menu par défaut sur mobile */
+#nav-links li {
+    display: none; /* Masquer les éléments de la liste */
+}
+
+/* Afficher le menu lorsqu'il est activé */
+#nav-links.show {
+    display: block; /* Afficher le menu en colonne */
+}
+
+/* Médias pour écrans de moins de 768px */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        width: 100%;
+        display: none; /* Par défaut, masquer le menu */
+    }
+
+    .navbar ul.show {
+        display: block; /* Afficher le menu lorsque la classe show est ajoutée */
+    }
+
+    /* Afficher le bouton hamburger sur les petits écrans */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Afficher les éléments de la liste sur mobile */
+    .navbar ul li {
+        display: block; /* Afficher les éléments de manière verticale */
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Effet de survol sur mobile */
+    #nav-links li a:hover {
+        background-color: #575757;
+    }
+
+    /* Animation pulsante */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Augmenter légèrement la taille */
+    }
+    100% {
+        transform: scale(1); /* Rétablir la taille */
+    }
+}
+}
+
+/* Style du bouton de connexion */
+.login-btn {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    padding: 4px 12px;
+    font-size: 0.8em;
+    background: #000;
+    color: #ff1a1a;
+    border: 1px solid #ff1a1a;
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1001;
+    transition: all 0.3s ease; /* Ajoute une transition douce */
+}
+
+/* Animation au survol */
+.login-btn:hover {
+    background: #1a0000;
+    color: #ff1a1a;
+    box-shadow: 0 0 10px rgba(255, 26, 26, 0.3);
+}
+
+/* Animation au clic */
+.login-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Style de la modal de connexion */
+.login-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1002;
+    backdrop-filter: blur(8px);
+    opacity: 0; /* Commence invisible */
+    transition: opacity 0.3s ease; /* Animation de fondu */
+}
+
+/* Classe pour l'animation d'apparition */
+.login-modal.show {
+    opacity: 1;
+}
+
+.login-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7); /* Commence plus petit */
+    background: #000;
+    padding: 40px;
+    width: 340px;
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+    transition: transform 0.3s ease; /* Animation de scale */
+}
+
+/* Animation d'apparition du contenu */
+.login-modal.show .login-content {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.login-content::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff1a1a, transparent, #ff1a1a);
+    z-index: -1;
+    animation: borderGlow 2s linear infinite;
+    filter: blur(5px);
+}
+
+.login-content h2 {
+    color: #ff1a1a;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px #ff1a1a;
+    transform: skew(3deg);
+}
+
+.login-content input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: rgba(255, 26, 26, 0.1);
+    border: 1px solid #ff1a1a;
+    color: #ff1a1a;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    transform: skew(3deg);
+    box-shadow: inset 0 0 10px rgba(255, 26, 26, 0.3);
+}
+
+.login-content input::placeholder {
+    color: rgba(255, 26, 26, 0.5);
+}
+
+.login-content input:focus {
+    outline: none;
+    border-color: #ff1a1a;
+    box-shadow: 
+        inset 0 0 15px rgba(255, 26, 26, 0.5),
+        0 0 20px rgba(255, 26, 26, 0.3);
+    background: rgba(255, 26, 26, 0.15);
+}
+
+.login-content button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: #ff1a1a;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    transform: skew(3deg);
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+}
+
+.login-content button:hover {
+    background: #000;
+    color: #ff1a1a;
+    box-shadow: 
+        0 0 20px #ff1a1a,
+        inset 0 0 15px #ff1a1a;
+    letter-spacing: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff1a1a;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px #ff1a1a;
+    transform: skew(3deg);
+}
+
+.close-btn:hover {
+    color: #fff;
+    transform: skew(3deg) scale(1.2) rotate(90deg);
+    text-shadow: 0 0 20px #ff1a1a;
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Supprimer les sauts de ligne inutiles dans le HTML */
+br + br {
+    display: none; /* Cache les doubles sauts de ligne */
+}
+
+/* Supprimer la marge du bas du dernier groupe de colonnes avant un nouveau titre */
+.columns:last-child {
+    margin-bottom: 0;
+}
+
+/* Animation d'arrière-plan */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Effet de sang qui coule */
+.blood-drip {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(139, 0, 0, 0.1) 5%,
+        rgba(139, 0, 0, 0.2) 10%,
+        transparent 15%
+    );
+    animation: bloodDrip 15s linear infinite;
+}
+
+/* Effet de brume */
+.mist {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        transparent 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    animation: mistMove 20s ease-in-out infinite;
+}
+
+/* Effet de particules */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at center, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px;
+    animation: particlesFloat 10s linear infinite;
+}
+
+/* Vignette sombre */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Zombies en arrière-plan */
+.zombie-horde {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/zombie-silhouette.png');
+    background-size: 80px;
+    opacity: 0.2;
+    animation: hordeMove 40s linear infinite;
+}
+
+/* Éclairs */
+.lightning {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: lightning 8s infinite;
+}
+
+/* Animations */
+@keyframes bloodDrip {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes mistMove {
+    0%, 100% {
+        transform: translate(-25%, -25%) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(0%, 0%) rotate(180deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes particlesFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-20px) rotate(360deg);
+    }
+}
+
+@keyframes hordeMove {
+    0% {
+        transform: translateX(-100%) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateX(100%) scale(1.2);
+        opacity: 0.1;
+    }
+}
+
+@keyframes lightning {
+    0%, 92%, 95%, 98% {
+        background: transparent;
+    }
+    93%, 96%, 99% {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    94%, 97%, 100% {
+        background: rgba(255, 0, 0, 0.2);
+    }
+}
+
+.blood-splatter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139,0,0,0.2) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* Ajout d'un effet de texte pour le titre sur la page d'accueil */
+.home-title {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    animation: titleGlow 2s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+/* Animation spéciale pour la page d'accueil */
+.twd-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Effet de sang qui dégouline */
+.blood-wall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(180deg, 
+            rgba(0,0,0,0.9) 0%,
+            rgba(139,0,0,0.2) 50%,
+            rgba(0,0,0,0.9) 100%
+        );
+    animation: bloodPulse 8s ease-in-out infinite;
+}
+
+/* Silhouettes de zombies */
+.zombie-shadows {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/zombie-group.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    opacity: 0.15;
+    animation: zombieWalk 30s linear infinite;
+}
+
+/* Effet de brouillard toxique */
+.toxic-fog {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(34, 139, 34, 0.1) 0%,
+        rgba(139, 0, 0, 0.1) 30%,
+        transparent 70%
+    );
+    filter: blur(8px);
+    animation: fogRotate 20s linear infinite;
+}
+
+/* Effet de grillage/prison */
+.prison-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg, rgba(0,0,0,0.8) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.8) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+}
+
+/* Animations */
+@keyframes bloodPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zombieWalk {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fogRotate {
+    0% {
+        transform: translate(-25%, -25%) rotate(0deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+/* Effet de flash rouge aléatoire */
+.emergency-flash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: emergencyLight 10s infinite;
+}
+
+@keyframes emergencyLight {
+    0%, 95%, 98% {
+        background: transparent;
+    }
+    96%, 99% {
+        background: rgba(255, 0, 0, 0.1);
+    }
+    97%, 100% {
+        background: rgba(255, 0, 0, 0.2);
+    }
+}
+
+/* Animation spéciale pour la page Personnages */
+.character-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Effet de portraits fantômes */
+.ghost-portraits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255,0,0,0.1) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(255,0,0,0.1) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(255,0,0,0.1) 0%, transparent 30%);
+    animation: portraitsFade 8s ease-in-out infinite;
+}
+
+/* Effet de traces de sang */
+.blood-trails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 45%, rgba(139,0,0,0.1) 50%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, rgba(139,0,0,0.1) 50%, transparent 55%);
+    background-size: 30px 30px;
+    animation: bloodTrailsMove 15s linear infinite;
+}
+
+/* Effet de survie */
+.survival-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent 0px, transparent 19px, rgba(255,255,255,0.1) 20px),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 19px, rgba(255,255,255,0.1) 20px);
+    filter: blur(1px);
+    opacity: 0.3;
+    animation: marksFlicker 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes portraitsFade {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bloodTrailsMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+@keyframes marksFlicker {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Effet de lumière dramatique */
+.dramatic-light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: lightShift 10s ease-in-out infinite;
+}
+
+@keyframes lightShift {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+}
+
+/* Animation spéciale pour la page Saisons */
+.seasons-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Effet de changement de saisons */
+.season-transition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, 
+            rgba(139, 69, 19, 0.1) 0%, /* Automne */
+            rgba(255, 255, 255, 0.1) 25%, /* Hiver */
+            rgba(34, 139, 34, 0.1) 50%, /* Printemps */
+            rgba(255, 140, 0, 0.1) 75% /* Été */
+        );
+    animation: seasonChange 20s linear infinite;
+}
+
+/* Effet de compteur d'épisodes */
+.episode-counter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-radial-gradient(
+            circle at 50% 50%,
+            transparent 0,
+            transparent 50px,
+            rgba(139, 0, 0, 0.1) 50px,
+            rgba(139, 0, 0, 0.1) 51px
+        );
+    animation: counterSpin 30s linear infinite;
+}
+
+/* Effet de progression temporelle */
+.time-progression {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 0, 0, 0.1) 50%,
+            transparent 100%
+        );
+    filter: blur(5px);
+    animation: timeProgress 15s ease-in-out infinite;
+}
+
+/* Nouvelles animations */
+@keyframes seasonChange {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.5) rotate(180deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes counterSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes timeProgress {
+    0%, 100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+    50% {
+        transform: translateX(100%) skewX(15deg);
+    }
+}
+
+/* Animation pour la page Spin-Off */
+.spinoff-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.parallel-worlds {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(139, 0, 0, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(0, 139, 139, 0.1) 0%, transparent 40%);
+    animation: worldsRotate 25s linear infinite;
+}
+
+.crossing-paths {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 45%, rgba(139, 0, 0, 0.1) 50%, transparent 55%),
+        linear-gradient(-45deg, transparent 45%, rgba(0, 139, 139, 0.1) 50%, transparent 55%);
+    background-size: 50px 50px;
+    animation: pathsCross 20s linear infinite;
+}
+
+/* Animation pour la page Secrets */
+.secrets-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.mystery-fog {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(139, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    filter: blur(10px);
+    animation: mysteryReveal 30s ease-in-out infinite;
+}
+
+.hidden-symbols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(45deg, transparent 48%, rgba(139, 0, 0, 0.2) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(139, 0, 0, 0.2) 50%, transparent 52%);
+    background-size: 30px 30px;
+    animation: symbolsFade 15s linear infinite;
+}
+
+/* Animation pour la page Photos */
+.photos-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.photo-frames {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.1) 50%, transparent 52%),
+        linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.1) 50%, transparent 52%);
+    background-size: 100px 100px;
+    animation: framesMove 20s linear infinite;
+}
+
+.developing-effect {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center,
+        rgba(139, 0, 0, 0.1) 0%,
+        transparent 60%
+    );
+    animation: developPhoto 15s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes timelineMove {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes numbersFloat {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes worldsRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pathsCross {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+@keyframes mysteryReveal {
+    0%, 100% { transform: translate(-25%, -25%) scale(1); }
+    50% { transform: translate(0%, 0%) scale(1.2); }
+}
+
+@keyframes symbolsFade {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+}
+
+@keyframes framesMove {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(100px) translateY(100px); }
+}
+
+@keyframes developPhoto {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 0.5; }
+}
+
