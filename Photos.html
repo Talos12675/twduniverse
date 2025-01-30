@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+    <html lang="fr"> <!-- Déclaration du type de document et langue définie sur le français -->
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Balises meta pour le SEO -->
+        <meta name="description" content="Galerie photos des lieux emblématiques de The Walking Dead">
+        <meta name="keywords" content="The Walking Dead, photos, lieux, Alexandria, Prison, Terminus">
+        <meta name="author" content="Fan de TWD">
+        <meta name="robots" content="index, follow">
+        
+        <!-- Balises Open Graph -->
+        <meta property="og:title" content="Photos - The Walking Dead Universe">
+        <meta property="og:description" content="Les lieux emblématiques de The Walking Dead en images">
+        <meta property="og:image" content="Logo.jpg">
+        <meta property="og:url" content="URL_DE_VOTRE_SITE/photos">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Photos - The Walking Dead">
+        <meta name="twitter:description" content="Découvrez les lieux de The Walking Dead">
+        <meta name="twitter:image" content="Logo.jpg">
+        
+        <!-- Autres meta -->
+        <meta name="theme-color" content="#000000">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <title>The Walking Dead Universe</title>
+        <link rel="icon" href="TWD-logo.jpg" type="image/jpeg">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    
+    <body>    
+        <header>
+            <button class="login-btn" onclick="openLoginModal()">Connexion</button>
+            <div class="login-modal" id="loginModal">
+                <div class="login-content">
+                    <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+                    <h2>Connexion</h2>
+                    <input type="text" placeholder="Nom d'utilisateur" required>
+                    <input type="password" placeholder="Mot de passe" required>
+                    <button onclick="login()">Se connecter</button>
+                </div>
+            </div>
+            <h1 class="home-title">The Walking Dead</h1> <!-- Titre principal de la page -->
+            <div class="navbar"> <!-- Début de la barre de navigation -->
+                <ul> <!-- Liste de navigation -->
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Résumé.html">Résumé</a></li>
+                    <li><a href="Personnages.html">Personnages</a></li>
+                    <li><a href="Saisons.html">Saisons</a></li>
+                    <li><a href="Spin-Off.html">Spin-Off</a></li>
+                    <li><a href="Secrets.html">Secrets</a></li>
+                    <li><a href="Photos.html">Photos</a></li>
+                </ul>
+            </div>
+        </header>
+    
+        <main>
+            <div class="container"> <!-- Conteneur pour l'intro avant tableau -->
+                <h2><u><b>Voici les 5 lieux importants de la série The Walking Dead :</b></u></h2> <!-- Intro avant tableau -->
+            </div>
+             <!-- Saut de ligne -->
+            <div class="carrousel-container"> <!-- Conteneur pour le carrousel d'images -->
+                <div class="carrousel"> <!-- Conteneur pour les éléments du carrousel (les images) -->
+                    <img src="Route.jpg" alt="Image 1" class="carrousel-item"> <!-- Image 1 du carrousel -->
+                    <img src="Woodbury.jpg" alt="Image 2" class="carrousel-item"> <!-- Image 2 du carrousel -->
+                    <img src="Terminus.jpg" alt="Image 3" class="carrousel-item"> <!-- Image 3 du carrousel -->
+                    <img src="Alexandria.jpg" alt="Image 4" class="carrousel-item"> <!-- Image 4 du carrousel -->
+                    <img src="Sanctuaire.jpg" alt="Image 5" class="carrousel-item"> <!-- Image 5 du carrousel -->
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button> <!-- Bouton précédent pour naviguer dans le carrousel -->
+                <button class="next" onclick="moveSlide(1)">&#10095;</button> <!-- Bouton suivant pour naviguer dans le carrousel -->
+            </div>
+            <br> <!-- Espacement -->
+    
+    <!-- Tableau d'information sur la série -->
+            <table>
+                <tr>
+                    <th>Images</th>
+                    <th>Histoire</th>
+                    <th>Nombre d'épisodes</th>
+                </tr>
+                <tr><td>1-La route d'Atlanta</td><td>La route d'Atlanta est une figure centrale au début de The Walking Dead : elle représente à la fois un lieu de départ, de perte d'espoir, de sacrifice, et de désillusion. Elle est aussi le cadre de plusieurs événements importants qui façonnent la dynamique du groupe de survivants. C'est un symbole de la transition entre la civilisation et le chaos qui va marquer les personnages tout au long de la série.</td><td>6 épisodes, principalement dans la saison 1</td></tr>
+                <tr><td>2-Woodbury</td><td>Woodbury est un élément clé de la saison 3 de The Walking Dead, car elle symbolise une illusion de sécurité dans un monde où la survie devient un enjeu moral et existentiel. Ce lieu devient le terrain d'affrontement entre le groupe de Rick Grimes et le Gouverneur, un tyran sans scrupules qui utilise le contrôle, la peur et la violence pour maintenir son pouvoir. Au-delà de la confrontation physique, Woodbury représente un microcosme des dangers d'un leadership autoritaire et de la perte de l'humanité dans un monde post-apocalyptique.</td><td>9 épisodes, du début de la saison 3 jusqu'à la fin de la saison 4</td></tr>
+                <tr><td>3-Terminus</td><td>Terminus est l'un des lieux les plus emblématiques et terrifiants de The Walking Dead, car il incarne l'illusion de refuge et de sécurité dans un monde post-apocalyptique. Ce qui semble être un sanctuaire se révèle rapidement être un piège où les survivants sont réduits à des victimes pour les cannibales qui dirigent le lieu. Le thème central de Terminus est celui de l'abus de pouvoir et de la décadence humaine, avec le cannibalisme comme métaphore de la perte totale de l'humanité dans un monde dévasté. La destruction de Terminus marque une nouvelle étape dans la lutte pour la survie du groupe de Rick et illustre la réalité de l'apocalypse : même les endroits les plus prometteurs peuvent se révéler être des endroits de terreur et de violence.</td><td>5 épisodes, de la fin de la saison 4 jusqu'au début de la saison 5</td></tr>
+                <tr><td>4-Alexandria</td><td>Alexandria est un lieu charnière dans The Walking Dead. À la fois sanctuaire et piège, elle représente la possibilité de reconstruction dans un monde post-apocalyptique. Cependant, elle est aussi un test moral et un terrain de lutte pour le groupe de Rick, qui doit faire face à des menaces extérieures et aux contradictions internes liées à la survie et au leadership. Alexandria est un symbole d'espoir fragile : une nouvelle civilisation qui doit se défendre contre l'inhumanité du monde extérieur, tout en préservant ce qui reste de l'humanité à l'intérieur.</td><td>20 épisodes, à partir de la saison 5 jusqu'à la saison 8.</td></tr>
+                <tr><td>5-Sanctuaire</td><td>Le Sanctuaire dans The Walking Dead est un lieu de tyrannie et de terreur. Dirigé par Negan et les Saviors, il incarne la domination par la violence et la peur, où les autres communautés sont contraintes à la soumission. Bien qu'il semble offrir un certain confort matériel, ce refuge est en réalité un prison où la liberté individuelle est sacrifiée au profit de l'ordre imposé par la force. Le conflit entre le groupe de Rick et les Saviors représente une lutte non seulement pour les ressources, mais aussi pour l'idée d'un monde meilleur, où la survie ne rime pas avec soumission et violence, mais avec solidarité et espoir. La chute du Sanctuaire marque donc un tournant important dans la quête pour reconstruire un monde plus juste après l'apocalypse.</td><td>15 épisodes, principalement de la saison 6 à la saison 8</td></tr>
+            </table>
+        </main>
+    
+        <!-- Script JavaScript pour le fonctionnement du carrousel -->
+        <script>
+        let currentIndex = 0; // Index actuel de l'image affichée dans le carrousel
+        const slides = document.querySelectorAll('.carrousel-item'); // Sélectionner toutes les images du carrousel
+        const totalSlides = slides.length; // Nombre total d'images dans le carrousel
+    
+        // Fonction pour déplacer le carrousel en fonction de la direction (-1 pour précédent, 1 pour suivant)
+        function moveSlide(direction) {
+            currentIndex += direction; // Modifier l'index actuel en fonction de la direction
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1; // Si l'index est inférieur à 0, revenir à la dernière image
+            } else if (currentIndex >= totalSlides) {
+                currentIndex = 0; // Si l'index est supérieur ou égal au nombre total d'images, revenir à la première image
+            }
+            updateCarousel(); // Mettre à jour l'affichage du carrousel
+        }
+    
+        // Fonction pour mettre à jour l'affichage du carrousel en déplaçant l'élément à afficher
+        function updateCarousel() {
+            const carousel = document.querySelector('.carrousel'); // Sélectionner le conteneur du carrousel
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`; // Déplacer le carrousel en fonction de l'index actuel
+        }
+    
+        // Défilement automatique du carrousel toutes les 3 secondes
+        setInterval(() => {
+            moveSlide(1); // Appeler la fonction moveSlide pour faire défiler les images vers la droite toutes les 3 secondes
+        }, 4000);
+        </script>
+    
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+    
+        <div class="container"> <!-- Conteneur pour la section carte -->
+            <h2><u><b>Carte des lieux importants de la série télévisée ou les jeux vidéos. Cliquez sur les &#x2B1C; de couleur à gauche des légendes pour en savoir plus</b></u></h2> <!-- Titre pour la section carte -->
+        </div>
+    
+        <div class="image-container">
+            <img src="Carte.jpg" alt="image_cliquable" usemap="#image-map" width="680" height="630">
+            <map name="image-map">
+                <area target="_blank" alt="World Beyong" title="World Beyong" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead:_World_Beyond" coords="462,310,17" shape="circle">
+                <area target="_blank" alt="TWD" title="TWD" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead_Wiki" coords="463,344,15" shape="circle">
+                <area target="_blank" alt="FTWD" title="FTWD" href="https://walkingdead.fandom.com/wiki/Fear_the_Walking_Dead" coords="464,382,17" shape="circle">
+                <area target="_blank" alt="TT GAME" title="TT GAME" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead:_The_Telltale_Series" coords="462,417,16" shape="circle">
+                <area target="_blank" alt="CRM Fuel Drop" title="CRM Fuel Drop" href="https://walkingdead.fandom.com/wiki/CRM_Fuel_Drop" coords="462,451,19" shape="circle">
+                <area target="_blank" alt="CRM" title="CRM" href="https://walkingdead.fandom.com/wiki/Civic_Republic_Military" coords="464,485,17" shape="circle">
+                <area target="_blank" alt="TWD Onslaught" title="TWD Onslaught" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead:_Onslaught" coords="462,517,16" shape="circle">
+                <area target="_blank" alt="Survival Instinct" title="Survival Instinct" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead:_Survival_Instinct" coords="462,550,16" shape="circle">
+                <area target="_blank" alt="Saints&amp;Sinners" title="Saints&amp;Sinners" href="https://walkingdead.fandom.com/wiki/The_Walking_Dead:_Saints_%26_Sinners" coords="462,582,15" shape="circle">
+                <area target="_blank" alt="Overkills  TWD" title="Overkills  TWD" href="https://walkingdead.fandom.com/wiki/Overkill%27s_The_Walking_Dead" coords="462,613,15" shape="circle">
+            </map>
+        </div>
+        
+    
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+    
+        <footer> <!-- Pied de page de la page -->
+            <p>&copy; 2025 The Walking Dead Universe. Tous droits réservés.</p> <!-- Mention des droits d'auteur -->
+            <p><a href="https://www.amc.com" target="_blank">Site officiel pour regarder</a></p> <!-- Lien vers le site officiel -->
+            <p><a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)" target="_blank">Wikipédia de The Walking Dead</a></p> <!-- Lien vers Wikipédia -->
+        </footer>
+
+        <script>
+            function openLoginModal() {
+                const modal = document.getElementById('loginModal');
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+            }
+
+            function closeLoginModal() {
+                const modal = document.getElementById('loginModal');
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+
+            function login() {
+                alert('Fonctionnalité de connexion à implémenter');
+                closeLoginModal();
+            }
+
+            window.onclick = function(event) {
+                const modal = document.getElementById('loginModal');
+                if (event.target == modal) {
+                    closeLoginModal();
+                }
+            }
+        </script>
+
+        <div class="photos-background">
+            <div class="photo-frames"></div>
+            <div class="developing-effect"></div>
+        </div>
+    </body>
+
+</html>

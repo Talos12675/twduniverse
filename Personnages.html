@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Début du document HTML avec spécification de la langue (français) -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Balises meta pour le SEO -->
+    <meta name="description" content="Découvrez tous les personnages principaux de The Walking Dead - Rick, Daryl, Carol et plus">
+    <meta name="keywords" content="The Walking Dead, personnages, Rick Grimes, Daryl Dixon, Carol Peletier, Negan">
+    <meta name="author" content="Fan de TWD">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Balises Open Graph -->
+    <meta property="og:title" content="Personnages - The Walking Dead Universe">
+    <meta property="og:description" content="Tous les personnages emblématiques de The Walking Dead">
+    <meta property="og:image" content="Logo.jpg">
+    <meta property="og:url" content="URL_DE_VOTRE_SITE/personnages">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personnages - The Walking Dead">
+    <meta name="twitter:description" content="Les héros et anti-héros de The Walking Dead">
+    <meta name="twitter:image" content="Logo.jpg">
+    
+    <!-- Autres meta -->
+    <meta name="theme-color" content="#000000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>The Walking Dead Universe</title>
+    <link rel="icon" href="TWD-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <div class="character-background">
+        <div class="ghost-portraits"></div>
+        <div class="blood-trails"></div>
+        <div class="survival-marks"></div>
+        <div class="dramatic-light"></div>
+    </div>
+
+    <header> <!-- En-tête du document -->
+        <button class="login-btn" onclick="openLoginModal()">Connexion</button>
+
+        <div class="login-modal" id="loginModal">
+            <div class="login-content">
+                <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+                <h2>Connexion</h2>
+                <input type="text" placeholder="Nom d'utilisateur" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button onclick="login()">Se connecter</button>
+            </div>
+        </div>
+
+        <script>
+            function openLoginModal() {
+                const modal = document.getElementById('loginModal');
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+            }
+
+            function closeLoginModal() {
+                const modal = document.getElementById('loginModal');
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+
+            function login() {
+                alert('Fonctionnalité de connexion à implémenter');
+                closeLoginModal();
+            }
+
+            window.onclick = function(event) {
+                const modal = document.getElementById('loginModal');
+                if (event.target == modal) {
+                    closeLoginModal();
+                }
+            }
+        </script>
+
+        <h1 class="home-title">The Walking Dead</h1> <!-- Titre principal de la page -->
+        <div class="navbar"> <!-- Début de la barre de navigation -->
+            <ul> <!-- Liste de navigation -->
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Résumé.html">Résumé</a></li>
+                <li><a href="Personnages.html">Personnages</a></li>
+                <li><a href="Saisons.html">Saisons</a></li>
+                <li><a href="Spin-Off.html">Spin-Off</a></li>
+                <li><a href="Secrets.html">Secrets</a></li>
+                <li><a href="Photos.html">Photos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="container"> <!-- Conteneur pour l'intro avant tableau -->
+            <h2><u><b>Voici tous les personnages importants de la série The Walking Dead :</b></u></h2> <!-- Intro avant tableau -->
+        </div><!-- Contenu principal de la page -->
+        <div class="container"> <!-- Conteneur pour les colonnes de personnages -->
+            <div class="columns"> <!-- Première ligne de colonnes -->
+                <div class="column"> <!-- Colonne pour le premier personnage -->
+                    <img src="image9.jpg" alt="Personnage 1"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Rick Grimes</u><p>Incarné par Andrew Lincoln<br><br>Ancien shérif adjoint, Rick, est le protagoniste central de la série. Il se réveille d'un coma pour découvrir un monde post-apocalyptique envahi par des zombies. En tant que leader du groupe de survivants, Rick est déterminé à protéger sa famille et ses amis, mais il lutte souvent avec des décisions morales difficiles. Sa trajectoire est marquée par des pertes tragiques, des dilemmes moraux et une évolution vers un personnage de plus en plus impitoyable.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le deuxième personnage -->
+                    <img src="image10.jpg" alt="Personnage 2"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Daryl Dixon</u><p>Incarné par Norman Reedus<br><br>Survivant habile, Daryl, est un expert en pistage, connu pour son arc et son arbalète. Au départ un marginal, il évolue en un membre essentiel du groupe. Daryl développe des liens étroits avec d'autres personnages, notamment avec Carol et Rick. Sa loyauté et sa capacité à survivre dans un monde hostile en font un personnage aimé des fans.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le troisième personnage -->
+                    <img src="image11.jpg" alt="Personnage 3"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Negan Smith</u><p>Incarné par Jeffrey Dean Morgan<br><br>Antagoniste principal introduit dans la saison 6, Negan, charismatique et brutal, dirige les Sauveurs, un groupe qui soumet les autres par la peur. Son arme emblématique, Lucille, une batte de baseball recouverte de fil barbelé, symbolise sa cruauté. Malgré sa nature tyrannique, Negan est également complexe, montrant des moments de vulnérabilité et un code moral particulier.</p></div>
+                </div>
+            </div>
+
+            <div class="columns"> <!-- Deuxième ligne de colonnes -->
+                <div class="column"> <!-- Colonne pour le quatrième personnage -->
+                    <img src="image12.jpg" alt="Personnage 1"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Carl Grimes</u><p>Incarné par Chandler Riggs<br><br>Fils de Rick et Lori, Carl, est un jeune enfant, mais il grandit rapidement dans ce monde violent. Carl lutte pour trouver sa place et comprendre les réalités de la survie. Son développement est marqué par des pertes douloureuses et des choix difficiles, le rendant de plus en plus mature et résilient.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le cinquième personnage -->
+                    <img src="image13.jpg" alt="Personnage 2"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Glenn Rhee</u><p>Incarné par Steven Yeun<br><br>Ancien livreur de pizza, Glenn, se révèle être un survivant astucieux et ingénieux. Sa relation avec Maggie est une source de réconfort dans le chaos, et il est souvent perçu comme l'un des membres les plus altruistes du groupe. Sa mort tragique est l'un des moments les plus marquants de la série.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le sixième personnage -->
+                    <img src="image14.jpg" alt="Personnage 3"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Maggie Greene</u><p>Incarnée par Lauren Cohan<br><br>Fille de Hershel Greene, Maggie devient rapidement un personnage central. Elle est forte, déterminée et évolue d'une jeune femme naïve à une leader respectée. Sa relation avec Glenn est l'un des points focaux de la série, et elle fait face à de nombreuses épreuves, y compris la perte de ses proches et les défis du leadership.</p></div>
+                </div>
+            </div>
+
+            <div class="columns"> <!-- Troisième ligne de colonnes -->
+                <div class="column"> <!-- Colonne pour le septième personnage -->
+                    <img src="image15.jpg" alt="Personnage 1"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Carol Peletier</u><p>Incarnée par Melissa McBride<br><br>Introduite comme une femme battue, Carol évolue en une survivante forte et indépendante. Sa transformation est spectaculaire : elle devient une tacticienne redoutable, capable de prendre des décisions difficiles pour protéger ceux qu'elle aime. Son lien avec Daryl et sa relation avec les enfants du groupe ajoutent de la profondeur à son personnage.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le huitième personnage -->
+                    <img src="image16.jpg" alt="Personnage 2"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Michonne</u><p>Incarnée par Danai Gurira<br><br>Introduite avec son katana emblématique et son caractère mystérieux, Michonne est d'abord solitaire, mais devient un membre précieux du groupe. Michonne est une combattante redoutable et une figure protectrice. Son parcours personnel, y compris sa quête pour retrouver ses proches, ajoute une dimension émotionnelle à son personnage.</p></div>
+                </div>
+                <div class="column"> <!-- Colonne pour le neuvième personnage -->
+                    <img src="image17.jpg" alt="Personnage 3"> <!-- Image du personnage avec texte alternatif -->
+                    <div class="text-line"><u>Abraham Ford</u><p>Incarné par Michael Cudlitz<br><br>Ancien militaire qui se présente comme un personnage brut et déterminé, Abraham a comme objectif initial de protéger Rosita et de mener le groupe vers la sécurité. Son caractère franc et sa bravoure en font un allié précieux, mais il est également marqué par des conflits internes et des luttes personnelles.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+
+        <footer> <!-- Pied de page de la page -->
+            <p>&copy; 2025 The Walking Dead Universe. Tous droits réservés.</p> <!-- Mention des droits d'auteur -->
+            <p><a href="https://www.amc.com" target="_blank">Site officiel pour regarder</a></p> <!-- Lien vers le site officiel -->
+            <p><a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)" target="_blank">Wikipédia de The Walking Dead</a></p> <!-- Lien vers Wikipédia -->
+        </footer>
+
+    </main>
+
+</body>
+</html>

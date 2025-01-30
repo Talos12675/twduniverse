@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Début du document HTML avec spécification de la langue (français) -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Balises meta pour le SEO -->
+    <meta name="description" content="Toutes les saisons de The Walking Dead - Résumés détaillés et dates de diffusion">
+    <meta name="keywords" content="The Walking Dead, saisons, épisodes, résumés, dates diffusion">
+    <meta name="author" content="Fan de TWD">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Balises Open Graph -->
+    <meta property="og:title" content="Saisons - The Walking Dead Universe">
+    <meta property="og:description" content="Découvrez toutes les saisons de The Walking Dead">
+    <meta property="og:image" content="Logo.jpg">
+    <meta property="og:url" content="URL_DE_VOTRE_SITE/saisons">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saisons - The Walking Dead">
+    <meta name="twitter:description" content="Toutes les saisons de The Walking Dead en détail">
+    <meta name="twitter:image" content="Logo.jpg">
+    
+    <!-- Autres meta -->
+    <meta name="theme-color" content="#000000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>The Walking Dead Universe</title>
+    <link rel="icon" href="TWD-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <header> <!-- En-tête du document -->
+        <button class="login-btn" onclick="openLoginModal()">Connexion</button>
+        <div class="login-modal" id="loginModal">
+            <div class="login-content">
+                <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+                <h2>Connexion</h2>
+                <input type="text" placeholder="Nom d'utilisateur" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button onclick="login()">Se connecter</button>
+            </div>
+        </div>
+        <h1 class="home-title">The Walking Dead</h1> <!-- Titre principal de la page -->
+        <div class="navbar"> <!-- Début de la barre de navigation -->
+            <ul> <!-- Liste de navigation -->
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Résumé.html">Résumé</a></li>
+                <li><a href="Personnages.html">Personnages</a></li>
+                <li><a href="Saisons.html">Saisons</a></li>
+                <li><a href="Spin-Off.html">Spin-Off</a></li>
+                <li><a href="Secrets.html">Secrets</a></li>
+                <li><a href="Photos.html">Photos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main> <!-- Contenu principal de la page -->
+        <div class="container"> <!-- Conteneur pour la phrase avant le tableau -->
+            <h2><u><b>Voici un tableau de toutes les saisons avec leur résumé et la date de sortie en France</b></u></h2> <!-- Phrase avant le tableau -->
+        </div>
+
+        <div class="seasons-background">
+            <div class="season-transition"></div>
+            <div class="episode-counter"></div>
+            <div class="time-progression"></div>
+        </div>
+
+        <table> <!-- Début du tableau -->
+            <tr> <!-- Ligne d'en-tête du tableau -->
+                <th>Saisons &#49;&#65039;&#8419; &#50;&#65039;&#8419;</th> <!-- Colonne pour les saisons -->
+                <th>Résumé &#127910;</th> <!-- Colonne pour les résumés -->
+                <th>Année de sortie en France &#127987;&#65039; </th> <!-- Colonne pour les dates de sortie -->
+            </tr>
+            <!-- 15 lignes de résumés des saisons -->
+            <tr><td>Saison 1 -> 6 épisodes</td><td>Rick Grimes, un shérif, se réveille d'un coma pour découvrir un monde <br> post-apocalyptique peuplé de zombies. Il part à la recherche de sa famille <br> et rejoint un groupe de survivants. Ils affrontent des dangers et commencent à s'organiser pour survivre.</td><td>Du 20 Mars 2011 au 5 Avril 2011</td></tr>
+            <tr><td>Saison 2 -> 13 épisodes</td><td>Le groupe trouve refuge dans une ferme, appartenant à Hershel Greene. <br> Les tensions montent alors qu'ils luttent pour la survie et font face à des <br> dilemmes moraux. La saison explore des thèmes de perte et de désespoir, avec des conflits internes au sein du groupe.</td><td>Du 21 Novembre 2011 au 22 Avril 2012</td></tr>
+            <tr><td>Saison 3 -> 16 épisodes</td><td>Le groupe s'installe dans une prison, offrant sécurité et ressources. <br> Ils rencontrent des adversaires, notamment le Gouverneur, un leader <br> tyrannique d'une communauté voisine. La lutte pour le contrôle et la survie intensifie les tensions et les pertes.</td><td>Du 7 Avril 2013 au 26 Mai 2013</td></tr>
+            <tr><td>Saison 4 -> 16 épisodes</td><td>La prison est attaquée, menant à la dispersion du groupe. Rick et les <br> autres doivent faire face à de nouveaux dangers et à des choix difficiles. <br> La saison aborde des thèmes de survie, de loyauté et de sacrifice.</td><td>Du 11 Mai 2013 au 29 Juin 2013</td></tr>
+            <tr><td>Saison 5 -> 16 épisodes</td><td>Le groupe se retrouve à Terminus, un lieu prétendument sûr qui se révèle <br> être un piège. Ils s'échappent et continuent leur lutte pour la survie tout <br> en cherchant des alliés. La saison se concentre sur la lutte contre des menaces humaines.</td><td>Du 19 Avril 2015 au 7 Juin 2015</td></tr>
+            <tr><td>Saison 6 -> 16 épisodes</td><td>Rick et son groupe rejoignent Alexandrie, une communauté fortifiée. <br> Ils doivent défendre leur nouvel environnement contre des menaces <br> extérieures, notamment les Saviors, menés par Negan. La saison explore les conflits moraux et les conséquences des choix.</td><td>Du 15 Mai 2016 au 3 Juillet 2016</td></tr>
+            <tr><td>Saison 7 -> 16 épisodes</td><td>Negan fait son apparition et impose sa loi, causant des pertes dévastatrices <br> au sein du groupe. Rick et ses alliés commencent à planifier une révolte contre lui. <br> La saison se concentre sur la domination, la résistance et la lutte pour la liberté.</td><td>Du 21 Mai 2017 au 9 Juillet 2017</td></tr>
+            <tr><td>Saison 8 -> 16 épisodes</td><td>Le conflit entre Rick et Negan atteint son paroxysme, entraînant une <br> guerre totale entre leurs groupes. Des alliances se forment et se brisent, <br> avec des conséquences tragiques. La saison explore la brutalité de la guerre et le coût de la survie.</td><td>Du 13 Mai 2018 au 1 Juillet 2018</td></tr>
+            <tr><td>Saison 9 -> 16 épisodes</td><td>Après la guerre, le groupe tente de reconstruire et de s'adapter à un <br> nouveau monde. Une nouvelle menace émerge avec les Chuchoteurs, qui <br> portent des masques de peau de zombie. La saison aborde la perte et l'évolution des personnages.</td><td>Du 25 Mai 2019 au 5 Juillet 2019</td></tr>
+            <tr><td>Saison 10 -> 22 épisodes</td><td>La lutte contre les Chuchoteurs s'intensifie, entraînant des conflits <br> sanglants. Les survivants doivent faire face à des pertes et à des révélations. <br> Les alliances sont testées, et des thèmes de loyauté et de survie se développent.</td><td>Du 15 Janvier 2020 au 15 Mai 2021</td></tr>
+            <tr><td>Saison 11 -> 24 épisodes</td><td>La dernière saison conclut l'histoire, avec une lutte finale contre les <br> Chuchoteurs et l'exploration de nouvelles communautés. Les personnages <br> affrontent leur passé et les choix qu'ils ont faits. La saison apporte des résolutions et des nouveaux départs pour les survivants.</td><td>Du 23 Août 2021 au 21 Novembre 2022</td></tr>
+        </table> <!-- Fin du tableau -->
+        <br>
+        <div class="container"> <!-- Conteneur pour le titre de la saison 1 -->
+            <h2><u><b> &#x2757; D'autres saisons ou spin-off vont bientôt sortir soyez à l'affut &#x2757;</b></u></h2> <!-- Titre de la saison 1 -->
+        </div>
+
+        <br> <!-- Saut de ligne -->
+        <br> <!-- Saut de ligne -->
+
+        <footer> <!-- Pied de page de la page -->
+            <p>&copy; 2025 The Walking Dead Universe. Tous droits réservés.</p> <!-- Mention des droits d'auteur -->
+            <p><a href="https://www.amc.com" target="_blank">Site officiel pour regarder</a></p> <!-- Lien vers le site officiel -->
+            <p><a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)" target="_blank">Wikipédia de The Walking Dead</a></p> <!-- Lien vers Wikipédia -->
+        </footer>
+
+    </main> <!-- Fin du contenu principal -->
+	
+    <script>
+        function openLoginModal() {
+            const modal = document.getElementById('loginModal');
+            modal.style.display = 'block';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        }
+
+        function closeLoginModal() {
+            const modal = document.getElementById('loginModal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        function login() {
+            alert('Fonctionnalité de connexion à implémenter');
+            closeLoginModal();
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('loginModal');
+            if (event.target == modal) {
+                closeLoginModal();
+            }
+        }
+    </script>
+</body>
+</html>
