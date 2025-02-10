@@ -1,0 +1,30 @@
+User-agent: *
+
+# Interdire l'accès aux dossiers de code source
+Disallow: /CSS/
+Disallow: /js/
+Disallow: /image/
+Disallow: /.git/
+Disallow: /README.md
+
+# Autoriser l'accès aux pages principales
+Allow: /
+Allow: /index.html
+Allow: /HTML/Résumé.html
+Allow: /HTML/Personnages.html
+Allow: /HTML/Saisons.html
+Allow: /HTML/Spin-Off.html
+Allow: /HTML/Secrets.html
+
+# Sitemap
+Sitemap: https://talos12675.github.io/twduniverse/sitemap.txt
+
+# Délai entre les requêtes des robots
+Crawl-delay: 10
+
+# Paramètres spécifiques pour les robots les plus courants
+User-agent: Googlebot
+Crawl-delay: 5
+
+User-agent: Bingbot
+Crawl-delay: 5 
