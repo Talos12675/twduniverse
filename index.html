@@ -1,34 +1,33 @@
-<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
-<html lang="fr"> <!-- Début du document HTML avec spécification de la langue (français) -->
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Balises meta pour le SEO -->
-    <meta name="description" content="Bienvenue sur The Walking Dead Universe - Le site fan ultime de la série">
-    <meta name="keywords" content="The Walking Dead, twd, zombies, Rick Grimes, Daryl Dixon, série TV, AMC, walker, rôdeurs, talos, talos12675, github, universe, Netflix, io">
-    <meta name="author" content="Fan de TWD">
+    <!-- SEO -->
+    <meta name="description" content="Bienvenue sur The Walking Dead Universe - Explorez des résumés d'épisodes, des profils de personnages, des actualités et des secrets autour de l'univers de la série The Walking Dead.">
+    <meta name="keywords" content="The Walking Dead, TWD, zombies, Rick Grimes, Daryl Dixon, série TV, AMC, walker, talos12675, almangoldjouin, thewalkingdeaduniverse, github">
+    <meta name="author" content="talos12675">
     <meta name="robots" content="index, follow">
-    
-    <!-- Balises Open Graph -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="The Walking Dead Universe - Accueil">
     <meta property="og:description" content="Découvrez l'univers complet de The Walking Dead">
     <meta property="og:image" content="Logo.jpg">
-    <meta property="og:url" content="URL_DE_VOTRE_SITE">
+    <meta property="og:url" content="https://talos12675.github.io/twduniverse/">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Walking Dead Universe">
     <meta name="twitter:description" content="Le site fan ultime de The Walking Dead">
     <meta name="twitter:image" content="Logo.jpg">
-    
-    <!-- Autres meta -->
+
+    <!-- Autres Meta -->
     <meta name="theme-color" content="#000000">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <title>The Walking Dead Universe</title>
-    <link rel="icon" href="TWD-logo.jpg" type="image/jpeg" class="twd-logo">
+    <link rel="icon" href="image/TWD-logo.jpg" type="image/jpeg" class="twd-logo">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
@@ -40,7 +39,7 @@
         <div class="prison-overlay"></div>
         <div class="emergency-flash"></div>
     </div>
-    <header> <!-- En-tête du document -->
+    <header>
         <button class="login-btn" onclick="openLoginModal()">Connexion</button>
 
         <div class="login-modal" id="loginModal">
@@ -57,7 +56,6 @@
         function openLoginModal() {
             const modal = document.getElementById('loginModal');
             modal.style.display = 'block';
-            // Ajoute un petit délai pour que la transition s'active
             setTimeout(() => {
                 modal.classList.add('show');
             }, 10);
@@ -66,7 +64,6 @@
         function closeLoginModal() {
             const modal = document.getElementById('loginModal');
             modal.classList.remove('show');
-            // Attend la fin de l'animation avant de cacher la modal
             setTimeout(() => {
                 modal.style.display = 'none';
             }, 300);
@@ -77,7 +74,6 @@
             closeLoginModal();
         }
 
-        // Fermer la modal si on clique en dehors
         window.onclick = function(event) {
             const modal = document.getElementById('loginModal');
             if (event.target == modal) {
@@ -86,42 +82,36 @@
         }
         </script>
 
-        <h1 class="home-title">The Walking Dead</h1> <!-- Titre principal de la page -->
-               <div class="navbar"> <!-- Début de la barre de navigation -->
-                <ul> <!-- Liste de navigation -->
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="Résumé.html">Résumé</a></li>
-                    <li><a href="Personnages.html">Personnages</a></li>
-                    <li><a href="Saisons.html">Saisons</a></li>
-                    <li><a href="Spin-Off.html">Spin-Off</a></li>
-                    <li><a href="Secrets.html">Secrets</a></li>
-                    <li><a href="Photos.html">Photos</a></li>
-                </ul>
-            </div>
-        </header>
-
-<br>
-<br>
-<br>
-    <main>
-        <div class="container"> <!-- Conteneur pour l'intro avant tableau -->
-            <h2><u><b>Bienvenue sur mon site The Walking Dead Universe</b></u></h2> <!-- Intro avant tableau -->
+        <h1 class="home-title">The Walking Dead</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Résumé.html">Résumé</a></li>
+                <li><a href="Personnages.html">Personnages</a></li>
+                <li><a href="Saisons.html">Saisons</a></li>
+                <li><a href="Spin-Off.html">Spin-Off</a></li>
+                <li><a href="Secrets.html">Secrets</a></li>
+                <li><a href="Photos.html">Photos</a></li>
+            </ul>
         </div>
-    <table> <!-- Début d'un tableau pour afficher des informations -->
-        <tr><td>Le site "Walking Dead Universe" est un espace dédié aux fans de l'univers de The Walking Dead. Il propose des actualités, des analyses détaillées des épisodes, des interviews exclusives avec les acteurs et les créateurs, ainsi que des forums pour discuter des théories et des événements de la série.
-<br>            Les visiteurs peuvent également y trouver des critiques, des résumés des saisons passées, des informations sur les spin-offs et des contenus multimédia exclusifs, comme des vidéos et des images inédites. Ce site est une véritable communauté pour les passionnés qui souhaitent approfondir leur expérience de The Walking Dead.
-<br>    <p><a href="https://youtu.be/v5ISBJc1wFk?si=LQS91t4uHZfnNNls" target="_blank">Générique de la série</a></p> <!-- Lien vers Youtube -->
-        </td></tr>        
-    </table>
-        <br> <!-- Saut de ligne -->
-        <br> <!-- Saut de ligne -->
-    </main>        
-    
-        <footer> <!-- Pied de page de la page -->
-            <p>&copy; 2025 The Walking Dead Universe. Tous droits réservés.</p> <!-- Mention des droits d'auteur -->
-            <p><a href="https://www.amc.com" target="_blank">Site officiel pour regarder</a></p> <!-- Lien vers le site officiel -->
-            <p><a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)" target="_blank">Wikipédia de The Walking Dead</a></p> <!-- Lien vers Wikipédia -->
-        </footer>
+    </header>
 
+    <main>
+        <div class="container">
+            <h2>Bienvenue sur mon The Walking Dead Universe</h2>
+        </div>
+        <table>
+            <tr><td>Le site "Walking Dead Universe" est un espace dédié aux fans de l'univers de The Walking Dead. Il propose des actualités, des analyses détaillées des épisodes, des interviews exclusives avec les acteurs et les créateurs, ainsi que des forums pour discuter des théories et des événements de la série.
+            Les visiteurs peuvent également y trouver des critiques, des résumés des saisons passées, des informations sur les spin-offs et des contenus multimédia exclusifs, comme des vidéos et des images inédites. Ce site est une véritable communauté pour les passionnés qui souhaitent approfondir leur expérience de The Walking Dead.
+            <p><a href="https://youtu.be/v5ISBJc1wFk?si=LQS91t4uHZfnNNls" target="_blank">Générique de la série</a></p>
+            </td></tr>
+        </table>
+    </main>        
+
+    <footer>
+        <p>&copy; 2025 The Walking Dead Universe. Tous droits réservés.</p>
+        <p><a href="https://www.amc.com" target="_blank">Site officiel pour regarder</a></p>
+        <p><a href="https://fr.wikipedia.org/wiki/The_Walking_Dead_(série_télévisée)" target="_blank">Wikipédia de The Walking Dead</a></p>
+    </footer>
 </body>
 </html>
